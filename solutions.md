@@ -72,4 +72,9 @@ Input: [0, -1, -5]
 Output: "even"
 
 
-
+ ```js
+        function oddOrEven(array) {
+            let toplam = array.reduce((a,b) => a + b,0)
+            return toplam % 2 === 0 ? 'even' : 'odd'
+        }
+    ```
