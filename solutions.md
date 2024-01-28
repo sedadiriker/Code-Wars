@@ -18,11 +18,11 @@ filter_list([1,2,'a','b']) == [1,2]
 filter_list([1,'a','b',0,15]) == [1,0,15]
 filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
-    ```js
-        function filter_list(l) {
-            return l.filter(item => typeof item === 'number')
-        }
-    ```
+```js
+    function filter_list(l) {
+        return l.filter(item => typeof item === 'number')
+    }
+```
 
 3. A square of squares
 You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
@@ -44,15 +44,15 @@ Examples
 25  =>  true
 26  =>  false
 
-    ```js
-        var isSquare = function(n){
-            if(n < 0) {
-                return false
-            }
-        const squart = Math.sqrt(n)
-        return squart === Math.floor(squart)  //Number.isİnteger() fonk. kullanlabiir
+```js
+    var isSquare = function(n){
+        if(n < 0) {
+            return false
         }
-    ```
+    const squart = Math.sqrt(n)
+    return squart === Math.floor(squart)  //Number.isİnteger() fonk. kullanlabiir
+    }
+```
 
 4. Task:
 Given a list of integers, determine whether the sum of its elements is odd or even.
@@ -72,9 +72,23 @@ Input: [0, -1, -5]
 Output: "even"
 
 
- ```js
-        function oddOrEven(array) {
-            let toplam = array.reduce((a,b) => a + b,0)
-            return toplam % 2 === 0 ? 'even' : 'odd'
-        }
-    ```
+```js
+    function oddOrEven(array) {
+        let toplam = array.reduce((a,b) => a + b,0)
+        return toplam % 2 === 0 ? 'even' : 'odd'
+    }
+```
+
+5. Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example(Input => Output):
+35231 => [1,3,2,5,3]
+0 => [0]
+
+```js
+    function digitize(n) {
+        let reversed = n.toString().split('').reverse()
+        return reversed.map(num => Number(num))
+    } 
+```
