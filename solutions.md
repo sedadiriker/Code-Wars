@@ -5,11 +5,11 @@ Complete the solution so that it reverses the string passed into it.
 'world'  =>  'dlrow'
 'word'   =>  'drow'
 
-    ```js
-        function solution(str){
+```js
+    function solution(str){
         return str.split('').reverse().join('')
-        }
-    ```
+    }
+ ```
 
 2. In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
